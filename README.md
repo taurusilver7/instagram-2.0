@@ -15,6 +15,8 @@ This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](
 
 It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
 
+The next js dependency required for tailwind to operate must be installed with latest version.
+
 ## Preview
 
 Preview the example live on [StackBlitz](http://stackblitz.com/):
