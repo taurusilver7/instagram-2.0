@@ -2,7 +2,7 @@
 
 Using React-JS, Next-JS with Taliwind Css framework to build a instagram clone to instant message and attachments.
 
-> The application runs on help with recoil and next Authbuild.
+> The application runs on help with recoil and custom nextAuth and firebase V9.
 
 # Next.js + Tailwind CSS Example
 
