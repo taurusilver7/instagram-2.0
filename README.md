@@ -1,6 +1,11 @@
 # Instagram 2.0
 
-Using React-JS, Next-JS with Taliwind Css framework to build a instagram clone to instant message and attachments.
+Using Next-JS, the best developer experience to build the application with all features needed for production, an instant messaging and attachment sending application was build.
+
+> Taliwind CSS framework provided the responsive design for the build.
+> Custom nextAuth for Authentication and Authorization.
+
+- The application included Recoil for state management instead of Redux or reducers.
 
 > The application runs on help with recoil and custom nextAuth and firebase V9.
 
