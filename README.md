@@ -9,6 +9,13 @@ Using Next-JS, the best developer experience to build the application with all f
 
 > The application runs on help with recoil and custom nextAuth and firebase V9.
 
+## Process
+
+- Refactor the starter template
+- Layout of the Application is created- Header, Feed and Modal.
+- A configuration file for whitelisting the domains for access by the next.js middle server is created and reload the server.
+-
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
