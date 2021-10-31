@@ -14,7 +14,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - Refactor the starter template
 - Layout of the Application is created- Header, Feed and Modal.
 - A configuration file for whitelisting the domains for access by the next.js middle server is created and reload the server.
--
+- Once the logo image is added, the breakpoints for different CSS styles w.r.t the screen size are at mobile by default. The breakpoints for different screen size are added as utility classes to the div.
 
 # Next.js + Tailwind CSS Example
 
