@@ -22,6 +22,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The Feed component to carry the posts and the suggestions in the application.
 - The Feed has two sections to carry the stories and Posts in one and the mini profile and suggestions in the other section.
 - A sub component to create Stories is created.
+- The whole Feed component is like a css grid with only one column in mobile and different columns with varient size.
 
 # Next.js + Tailwind CSS Example
 
