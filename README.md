@@ -16,7 +16,8 @@ Using Next-JS, the best developer experience to build the application with all f
 - A configuration file for whitelisting the domains for access by the next.js middle server is created and reload the server.
 - Once the logo image is added, the breakpoints for different CSS styles w.r.t the screen size are at mobile by default. The breakpoints for different screen size are added as utility classes to the div.
 - The search bar and the right option components are created and styled.
-- A custom plugin is created for a multi-use CSS style for repeated usage.
+- A custom plugin is created for a multi-use CSS style for repeated usage in the /styles/global.css.
+- Using relative and absolute utility classes, create a bouncing anime number on the option for effect.
 
 # Next.js + Tailwind CSS Example
 
