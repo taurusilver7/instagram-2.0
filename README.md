@@ -19,6 +19,9 @@ Using Next-JS, the best developer experience to build the application with all f
 - A custom plugin is created for a multi-use CSS style for repeated usage in the /styles/global.css.
 - Using relative and absolute utility classes, create a bouncing anime number on the option for effect.
 - Stick the header to the top.
+- The Feed component to carry the posts and the suggestions in the application.
+- The Feed has two sections to carry the stories and Posts in one and the mini profile and suggestions in the other section.
+- A sub component to create Stories is created.
 
 # Next.js + Tailwind CSS Example
 
