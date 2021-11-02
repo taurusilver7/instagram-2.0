@@ -49,6 +49,15 @@ const Header = () => {
           <HomeIcon className="navBtn" />
           <MenuIcon className="h-6 md:hidden cursor-pointer" />
           <PaperAirplaneIcon className="navBtn" />
+          <PlusCircleIcon className="navBtn" />
+          <UserGroupIcon className="navBtn" />
+          <HeartIcon className="navBtn" />
+
+          <img
+            src="https://static.wikia.nocookie.net/57cca220-437f-4ce2-b451-d1963591ab16"
+            alt="profile pic"
+            className="h-10 rounded-full cursor-pointer"
+          />
         </div>
       </div>
     </div>
