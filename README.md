@@ -18,6 +18,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The search bar and the right option components are created and styled.
 - A custom plugin is created for a multi-use CSS style for repeated usage in the /styles/global.css.
 - Using relative and absolute utility classes, create a bouncing anime number on the option for effect.
+- Stick the header to the top.
 
 # Next.js + Tailwind CSS Example
 
