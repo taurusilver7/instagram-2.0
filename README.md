@@ -23,7 +23,8 @@ Using Next-JS, the best developer experience to build the application with all f
 - The Feed has two sections to carry the stories and Posts in one and the mini profile and suggestions in the other section.
 - A sub component to create Stories is created.
 - The whole Feed component is like a css grid with only one column in mobile and different columns with varient size.
-
+- The data in the stories component was populated from [faker.js](https://github.com/marak/Faker.js/) library. This library is for generating random-realistic fake data for testing and portfolio enviroments.
+- Map through an array of faker objects with fake data populated from useEffect in the Stories component and get access to them in the Feed.
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
