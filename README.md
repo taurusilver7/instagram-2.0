@@ -30,6 +30,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The necessary options in a post component are added to the individual post component and styled with custom plugin.
 - A caption box to display the text and the username of the post below the buttons.
 - The input box is created before the comments sections.
+- The miniprofile of the user and the suggestions from the instagram components are created and styled for mobile and desktop views.
 
 # Next.js + Tailwind CSS Example
 
