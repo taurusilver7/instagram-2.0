@@ -26,6 +26,9 @@ Using Next-JS, the best developer experience to build the application with all f
 - The data in the stories component was populated from [faker.js](https://github.com/marak/Faker.js/) library. This library is for generating random-realistic fake data for testing and portfolio enviroments.
 - Map through an array of faker objects with fake data populated from useEffect in the Stories component and get access to them in the Feed.
 - Style the story scrollbar with a scrollbar plugin in the configuration with tailwind scrollbar.
+- The Posts and Post components to carry the posts in the application are created and stlyed in grid pattern.
+- The necessary options in a post component are added to the individual post component and styled with custom plugin.
+
 
 # Next.js + Tailwind CSS Example
 
