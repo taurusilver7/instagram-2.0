@@ -31,6 +31,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - A caption box to display the text and the username of the post below the buttons.
 - The input box is created before the comments sections.
 - The miniprofile of the user and the suggestions from the instagram components are created and styled for mobile and desktop views.
+- A custom sign-in page with nextAuth—authentication system for google with next js—is created.
 
 # Next.js + Tailwind CSS Example
 
