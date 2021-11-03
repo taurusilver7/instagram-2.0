@@ -32,6 +32,17 @@ Using Next-JS, the best developer experience to build the application with all f
 - The input box is created before the comments sections.
 - The miniprofile of the user and the suggestions from the instagram components are created and styled for mobile and desktop views.
 - A custom sign-in page with nextAuth—authentication system for google with next js—is created.
+- Beta versions are prone to breakings, so lock the version in packages.json by removing (^) from the version.
+- The Auth setup is created in `/pages/api/auth/[...nextauth].js` file.
+- The provider varies from google to github and the credentials are stored in env variables.
+- To fire the credentials and power the build, the firebase v9 is used.
+- Once the webapp is setup, the google provider is setup and the Web SDK configuration is enabled for confidentiality.
+
+* By default, the next js doesn't make any env variables public, unless a string 'next_public_the name' is added to the env for allowing the client to access the server in the appication.
+
+- The standard authentication page is setup in the [...nextauth].js file by default with the provider configuration. To customize the screen, add in the theme setting to add logo, brandColor and theme to the page and pages setting to add signIn page location.
+
+- The page location is in /pages/auth/fileName.js. It is the conventional standard the next js recommends to setup auth pages.
 
 # Next.js + Tailwind CSS Example
 
