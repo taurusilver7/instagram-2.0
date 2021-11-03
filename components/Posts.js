@@ -1,6 +1,6 @@
 import Post from "./Post";
 
-const DUMMY_DATA = [
+const posts = [
   {
     id: "123",
     username: "taurusilver",
@@ -29,10 +29,16 @@ const DUMMY_DATA = [
 const Posts = () => {
   return (
     <div>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {posts.map((post) => (
+        <Post
+          key={post.id}
+          id={post.id}
+          username={post.username}
+          userImg={post.userImg}
+          img={post.img}
+          caption={post.caption}
+        />
+      ))}
     </div>
   );
 };
