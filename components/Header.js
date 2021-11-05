@@ -8,8 +8,11 @@ import {
   MenuIcon,
 } from "@heroicons/react/outline";
 import { HomeIcon } from "@heroicons/react/solid";
+import { useSession } from "next-auth/react";
 
 const Header = () => {
+  const { data: session } = useSession();
+  console.log(session);
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       {/* left */}
@@ -59,7 +62,7 @@ const Header = () => {
           <HeartIcon className="navBtn" />
 
           <img
-            src="https://static.wikia.nocookie.net/57cca220-437f-4ce2-b451-d1963591ab16"
+            src={session?.user?.image}
             alt="profile pic"
             className="h-10 rounded-full cursor-pointer"
           />
