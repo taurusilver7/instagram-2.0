@@ -40,11 +40,21 @@ Using Next-JS, the best developer experience to build the application with all f
 
 * By default, the next js doesn't make any env variables public, unless a string 'next_public_the name' is added to the env for allowing the client to access the server in the appication.
 
+## Authentication.
+
 - The standard authentication page is setup in the [...nextauth].js file by default with the provider configuration. To customize the screen, add in the theme setting to add logo, brandColor and theme to the page and pages setting to add signIn page location.
 
 - The page location is in /pages/auth/fileName.js. It is the conventional standard the next js recommends to setup auth pages.
+- The server side rendering and getting provider from the next-auth/react is required to provide the required authentication.
+- The authication provided was on the developer side. The request to allow the contents of the application has not been reviewed/verified by the google.
+- Goto the instagram-v2 cloud platfrom in [cloud.google.com/cp] and select the Credential option in API & Services menu.
+- Any google Authentication goes through a protocol called OAuth 2.0. Edit the OAuth Client ID to add the current localhost env to authorise the application and the vercel deployed website domain to the client ID later.
+- Add the redirect url from the Google error page to the Authorized redirect url in the google cloud platform and the deployed website domain later to the redirect url.
+- The google allows the redirect url to authrize the application and grant access and log in to the application.
+- Wrap the component in _app.js in session provider to hold the login session throughout the application unless logged out. It was like a next-auth session wrapping the entire application.
+- The header component uses the session to extract the user details from the google account. And sometimes, the google may fail to respond the requests from 3rd party authentications.
 
-# Next.js + Tailwind CSS Example
+# Next.js + Tailwind CSS Example.
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
@@ -54,17 +64,17 @@ The next js dependency required for tailwind to operate must be installed with l
 
 ## Preview
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+Preview the example live on [StackBlitz](http://stackblitz.com/)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
 
-## Deploy your own
+## Deploy
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-## How to use
+## Usage.
 
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
