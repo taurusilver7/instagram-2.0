@@ -56,6 +56,7 @@ Using Next-JS, the best developer experience to build the application with all f
 
 - The instagram page before login only displays the home and menu options. A clause to only show the remaining options if there's a session is added to the logic. And the signIn and signOut functions from the next-auth are implemented.
 - To redirect the correct structure to the application, the signIn page is customized as per requirement. The Header component is added to the signIn page and styled with tailwindcss.
+- The return back to homescreen after logging is fixed with passing an object {callbackUrl: "/"} in signInProvider button.
 
 # Next.js + Tailwind CSS Example.
 
