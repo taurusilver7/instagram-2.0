@@ -61,7 +61,8 @@ Using Next-JS, the best developer experience to build the application with all f
 - The minprofile hardcoded data needs to be replaced with the user data, but the login state session only provided a limited data about the user (email, image, name).
 
 - Tap into the callback option in the [...nextauth] to rewrite and update the user data before and after the session. The new session user-data contains the uid, image and username from google.
-- A conditional render is added to the miniprofile to exist only when a session remains in the application.
+- A conditional render is added to the miniprofile and suggestions to exist only when a session remains in the application in the Feed component.
+- The main part of the Feed is styled to the left with the absence of miniprofile and suggestions in the Feed. The styling is converted to jsx to add a condition to bring the main to the page center.
 
 # Next.js + Tailwind CSS Example.
 
