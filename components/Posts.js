@@ -22,7 +22,7 @@ const posts = [
     userImg:
       "https://static.wikia.nocookie.net/57cca220-437f-4ce2-b451-d1963591ab16",
     img: "https://static.wikia.nocookie.net/57cca220-437f-4ce2-b451-d1963591ab16",
-    caption: "Hack the box. Fuck him hard. Mess him up",
+    caption: "Hack the box. Mess him up",
   },
 ];
 
