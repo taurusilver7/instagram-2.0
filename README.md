@@ -71,7 +71,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The routing is like a push/pull pages from the application stack.
 - useRouter() function from next/router and the parent div of the associated image is added an action onClick to push to the app to homepage.
 
-* Uplaod using a Modal.
+* Upload using a Modal.
 
 - To add a functionality to add a modal from the modal UI from tailwind css.
 - To use firebase storage to upload an image to firebase database.
@@ -84,6 +84,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The read-only version is obtained from useReciolateValue(). The setOpen is set in the associate tailwind UI icon.
 - A similar state is created in the component responsible for modal information and tap into the state from the global store using useRecoilState().
 - The modal is where the file-picker and the file upload logic is created.
+- @headlessui/react to build completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
 
 # Next.js + Tailwind CSS Example.
 
