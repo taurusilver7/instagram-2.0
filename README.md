@@ -83,7 +83,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - To pull the info from the global state, useRecoilState(), similar to useState() is used. The state is parsed as the argument.
 - The read-only version is obtained from useReciolateValue(). The setOpen is set in the associate tailwind UI icon.
 - A similar state is created in the component responsible for modal information and tap into the state from the global store using useRecoilState().
-- The modal is where the file-picker 
+- The modal is where the file-picker and the file upload logic is created.
 
 # Next.js + Tailwind CSS Example.
 
