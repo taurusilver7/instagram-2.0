@@ -71,6 +71,12 @@ Using Next-JS, the best developer experience to build the application with all f
 - The routing is like a push/pull pages from the application stack.
 - useRouter() function from next/router and the parent div of the associated image is added an action onClick to push to the app to homepage.
 
+- Uplaod using a Modal.
+- To add a functionality to add a modal from the modal UI from tailwind css.
+- To use firebase storage to upload an image to firebase database.
+- The global store wraps around the entire application and the value of the state can be changed from anywhere in the application.
+- Wrap the entirre application with the recoil root to initiate the global store, just like for the redux.
+
 # Next.js + Tailwind CSS Example.
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
