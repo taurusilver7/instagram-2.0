@@ -75,7 +75,8 @@ Using Next-JS, the best developer experience to build the application with all f
 - To add a functionality to add a modal from the modal UI from tailwind css.
 - To use firebase storage to upload an image to firebase database.
 - The global store wraps around the entire application and the value of the state can be changed from anywhere in the application.
-- Wrap the entirre application with the recoil root to initiate the global store, just like for the redux.
+- Wrap the entirre application with the recoil root to initiate the global store, just like for the redux to push/pull the state from any level in the app.
+- Recoil is not persistant, but a plug-in can make it persistant.
 
 # Next.js + Tailwind CSS Example.
 
