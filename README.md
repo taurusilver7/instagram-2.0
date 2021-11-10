@@ -71,12 +71,17 @@ Using Next-JS, the best developer experience to build the application with all f
 - The routing is like a push/pull pages from the application stack.
 - useRouter() function from next/router and the parent div of the associated image is added an action onClick to push to the app to homepage.
 
-- Uplaod using a Modal.
+* Uplaod using a Modal.
+
 - To add a functionality to add a modal from the modal UI from tailwind css.
 - To use firebase storage to upload an image to firebase database.
 - The global store wraps around the entire application and the value of the state can be changed from anywhere in the application.
-- Wrap the entirre application with the recoil root to initiate the global store, just like for the redux to push/pull the state from any level in the app.
+- Wrap the entire application in \_app.js with the RecoilRoot to initiate the global store, just like for the redux to push/pull the state from any level in the app.
 - Recoil is not persistant, but a plug-in can make it persistant.
+- atoms in Recoil is similar to slices in Redux where different atoms comprise different information. (user, modal.,)
+- A modalAtom responsible for modal information is created for global state management for the modal. The state management has key:value pair with a key and a default value.
+- To pull the info from the global state, useRecoilState(), similar to useState() is used. The state is parsed as the argument.
+- The read-only version is obtained from useReciolateValue(). The setOpen is set in the associate tailwind UI icon.
 
 # Next.js + Tailwind CSS Example.
 
