@@ -65,6 +65,12 @@ Using Next-JS, the best developer experience to build the application with all f
 - The main part of the Feed is styled to the left with the absence of miniprofile and suggestions in the Feed. The styling is converted to jsx to add a condition to bring the main to the page center.
 - The Storie component uses the session to add the user as a story to the application. The rate limiter in the google might obstruct from using/accessing the user-data repeatedly. It's because the request/reciever and the sender are from the same local environment, which is a non-https source. It doesn't happen with an https source.
 
+* Routing
+
+- The next-js inbuilt router is used for shifiting between pages in an application instead of a.href tags.
+- The routing is like a push/pull pages from the application stack.
+- useRouter() function from next/router and the parent div of the associated image is added an action onClick to push to the app to homepage.
+
 # Next.js + Tailwind CSS Example.
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
