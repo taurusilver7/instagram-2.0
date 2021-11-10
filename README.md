@@ -85,6 +85,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - A similar state is created in the component responsible for modal information and tap into the state from the global store using useRecoilState().
 - The modal is where the file-picker and the file upload logic is created.
 - @headlessui/react to build completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
+- Trasistion and Dialog for customizing the modal component from the @headlessui/react.
 
 # Next.js + Tailwind CSS Example.
 
