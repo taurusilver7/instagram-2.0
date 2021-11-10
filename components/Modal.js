@@ -8,7 +8,15 @@ const Modal = () => {
   const [open, setOpen] = useRecoilState(modalState);
   const filePickerRef = useRef(null);
   const captionRef = useRef(null);
+  const [loading, setLoading] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
+
+  const uploadPost = async () => {
+    //   responsible to upload to firebase storage and firebase.
+    if (loading) return;
+
+    setloading(true);
+  };
 
   const addImageToPost = (e) => {
     //   To display the preview of the selected picture.
