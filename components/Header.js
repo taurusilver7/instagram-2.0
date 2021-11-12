@@ -72,7 +72,7 @@ const Header = () => {
                 </div>
               </div>
               <PlusCircleIcon
-                onClick={() => setOpen(false)}
+                onClick={() => setOpen(true)}
                 className="navBtn"
               />
               <UserGroupIcon className="navBtn" />
