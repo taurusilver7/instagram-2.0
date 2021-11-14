@@ -87,6 +87,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - @headlessui/react to build completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
 - Trasitition and Dialog for customizing the modal component from the @headlessui/react.
 - The root and child sub-elements in Transititon component to grant a element within the modal whereas Overlay positions the text part of the modal.
+-
 
 # Next.js + Tailwind CSS Example.
 
