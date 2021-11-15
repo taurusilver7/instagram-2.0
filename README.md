@@ -23,12 +23,12 @@ Using Next-JS, the best developer experience to build the application with all f
 - Stick the header to the top.
 - The Feed component to carry the posts and the suggestions in the application.
 - The Feed has two sections to carry the stories and Posts in one and the mini profile and suggestions in the other section.
-- A sub component to create Stories is created.
+- A sub-component to create Stories is created.
 - The whole Feed component is like a css grid with only one column in mobile and different columns with varient size.
 - The data in the stories component was populated from [faker.js](https://github.com/marak/Faker.js/) library. This library is for generating random-realistic fake data for testing and portfolio enviroments.
 - Map through an array of faker objects with fake data populated from useEffect in the Stories component and get access to them in the Feed.
-- Style the story scrollbar with a scrollbar plugin in the configuration with tailwind scrollbar.
-- The Posts and Post components to carry the posts in the application are created and stlyed in grid pattern.
+- Style the story scrollbar with a scrollbar-plugin [tailwindcss-scrolbar](https://www.npmjs.com/package/tailwind-scrollbar) in the configuration with tailwind scrollbar.
+- The Posts and Post components to carry the posts in the application are created and styled in grid pattern.
 - The necessary options in a post component are added to the individual post component and styled with custom plugin.
 - A caption box to display the text and the username of the post below the buttons.
 - The input box is created before the comments sections.
