@@ -29,7 +29,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - Map through an array of faker objects with fake data populated from useEffect in the Stories component and get access to them in the Feed.
 - Style the story scrollbar with a scrollbar-plugin [tailwindcss-scrolbar](https://www.npmjs.com/package/tailwind-scrollbar) in the configuration with tailwind scrollbar.
 - The Posts and Post components to carry the posts in the application are created and styled in grid pattern.
-- The necessary options in a post component are added to the individual post component and styled with custom plugin.
+- The necessary options in a post component are added to the individual post component and styled with custom-plugin with [headlessui](https://headlessui.dev/).
 - A caption box to display the text and the username of the post below the buttons.
 - The input box is created before the comments sections.
 - The miniprofile of the user and the suggestions from the instagram components are created and styled for mobile and desktop views.
@@ -78,6 +78,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - To add a functionality to add a modal from the modal UI from tailwind css.
 - To use firebase storage to upload an image to firebase database.
 - The global store wraps around the entire application and the value of the state can be changed from anywhere in the application.
+- Import the recoil dependency from [recoil](https://recoiljs.org/)
 - Wrap the entire application in \_app.js with the RecoilRoot to initiate the global store, just like for the redux to push/pull the state from any level in the app.
 - Recoil is not persistant, but a plug-in can make it persistant.
 - atoms in Recoil is similar to slices in Redux where different atoms comprise different information. (user, modal.,)
