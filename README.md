@@ -42,7 +42,7 @@ Using Next-JS, the best developer experience to build the application with all f
 
 * By default, the next js doesn't make any env variables public, unless a string 'next_public_the name' is added to the env for allowing the client to access the server in the appication.
 
-## Authentication.
+## Authentication
 
 - The standard authentication page is setup in the [...nextauth].js file by default with the provider configuration. To customize the screen, add in the theme setting to add logo, brandColor and theme to the page and pages setting to add signIn page location.
 
@@ -93,7 +93,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - An uploadPost function to perform the document to firebase storage and fire the firestore.
 - To avoid any time losses during the image loading, a state to time the sequence in the correct order is created.
 
-# Next.js + Tailwind CSS Example.
+# Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
@@ -113,7 +113,7 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-## Usage.
+## Usage
 
 Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
