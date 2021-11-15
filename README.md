@@ -5,11 +5,13 @@ Using Next-JS, the best developer experience to build the application with all f
 > Taliwind CSS framework provided the responsive design for the build.
 > Custom nextAuth for Authentication and Authorization.
 
-- The application included Recoil for state management instead of Redux or reducers.
+- The application included Recoil for state-management instead of Redux or reducers.
 
 > The application runs on help with recoil and custom nextAuth and firebase V9.
 
 ## Process
+
+- import the required dependencies & dev-dependencies from `npm install <package>`.
 
 - Refactor the starter template
 - Layout of the Application is created- Header, Feed and Modal.
