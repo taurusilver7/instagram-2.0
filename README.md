@@ -54,7 +54,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - Add the redirect url from the Google error page to the Authorized redirect url in the google cloud platform and the deployed website domain later to the redirect url.
 - The google allows the redirect url to authrize the application and grant access and log in to the application.
 - Wrap the component in _/\_app.js/_ in session provider to hold the login session throughout the application unless logged out. It was like a next-auth session wrapping the entire application.
-- The header component uses the session to extract the user details from the google account. And sometimes, the google may fail to respond the requests from 3rd party authentications.
+- Extract the user data from the google account using session in the Header component. Google may fail to respond the requests from 3rd party authentications sometimes.
 
 - The instagram page before login only displays the home and menu options. A clause to only show the remaining options if there's a session is added to the logic. And the signIn and signOut functions from the next-auth are implemented.
 - To redirect the correct structure to the application, the signIn page is customized as per requirement. The Header component is added to the signIn page and styled with tailwindcss.
