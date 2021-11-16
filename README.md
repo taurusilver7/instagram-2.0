@@ -65,7 +65,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - Tap into the callback option in the [...nextauth] to rewrite and update the user data before and after the session. The new session user-data contains the uid, image and username from google.
 - A conditional render to the Miniprofile and Suggestions to exist only when a session remains in the application in the Feed component is added.
 - The main part of the Feed is styled to the left with the absence of miniprofile and suggestions in the Feed. The styling is converted to jsx to add a condition to bring the main to the page center.
-- The Storie component uses the session to add the user as a story to the application. The rate limiter in the google might obstruct from using/accessing the user-data repeatedly. It's because the request/reciever and the sender are from the same local environment, which is a non-https source. It doesn't happen with an https source.
+- The Story component uses the session to add the user as a story to the application. The rate-limiter in the google might obstruct from using/accessing the user-data repeatedly. It's because the request/receiver and the sender are from the same local env, which is a non-https source. It doesn't happen with an https source.
 
 * Routing
 
