@@ -40,7 +40,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - To fire the credentials and power the build, the firebase v9 is used.
 - Once the webapp is setup, the google provider is setup and the Web SDK configuration is enabled for confidentiality.
 
-* By default, the next js doesn't make any env variables public, unless a string 'next_public_the name' is added to the env for allowing the client to access the server in the appication.
+* By default, the nextjs doesn't make any env variables public, unless a string 'next_public_the name' is added to the env for allowing the client to access the server in the appication.
 
 ## Authentication
 
@@ -49,7 +49,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The page location is in /pages/auth/fileName.js. It is the conventional standard the next js recommends to setup auth pages.
 - The server side rendering and getting provider from the next-auth/react is required to provide the required authentication.
 - The authication provided was on the developer side. The request to allow the contents of the application has not been reviewed/verified by the google.
-- Goto the instagram-v2 cloud platfrom in [cloud.google.com/cp] and select the Credential option in API & Services menu.
+- Select the _/credential/_ option in the **API and Services** from the [google cloud](cloud.google.com/cp).
 - Any google Authentication goes through a protocol called OAuth 2.0. Edit the OAuth Client ID to add the current localhost env to authorise the application and the vercel deployed website domain to the client ID later.
 - Add the redirect url from the Google error page to the Authorized redirect url in the google cloud platform and the deployed website domain later to the redirect url.
 - The google allows the redirect url to authrize the application and grant access and log in to the application.
