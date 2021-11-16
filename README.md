@@ -60,7 +60,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - To redirect the correct structure to the application, the signIn page is customized as per requirement. The Header component is added to the signIn page and styled with tailwindcss.
 - The return back to homescreen after logging is fixed with passing an object {callbackUrl: "/"} in signInProvider button.
 - Once the redirect url and session to log the user in are created, modify the header, miniprofile to take the user data accordingly. The header carry signIn and signOut functions from next-auth.
-- The minprofile hardcoded data needs to be replaced with the user data, but the login state session only provided a limited data about the user (email, image, name).
+- The Minprofile hardcoded data needs to be replaced with the user data, but the login state session only provided a limited data about the user (email, image, name).
 
 - Tap into the callback option in the [...nextauth] to rewrite and update the user data before and after the session. The new session user-data contains the uid, image and username from google.
 - A conditional render is added to the miniprofile and suggestions to exist only when a session remains in the application in the Feed component.
