@@ -46,7 +46,7 @@ Using Next-JS, the best developer experience to build the application with all f
 
 - The standard authentication page is setup in the [...nextauth].js file by default with the provider configuration. To customize the screen, add in the theme setting to add logo, brandColor and theme to the page and pages setting to add signIn page location.
 
-- The page location is in /pages/auth/fileName.js. It is the conventional standard the next js recommends to setup auth pages.
+- The page location is in _//pages/auth/fileName.js/_ It is the conventional standard the next js recommends to setup auth pages.
 - The server side rendering and getting provider from the next-auth/react is required to provide the required authentication.
 - The authication provided was on the developer side. The request to allow the contents of the application has not been reviewed/verified by the google.
 - Select the _/credential/_ option in the **API and Services** from the [google cloud](cloud.google.com/cp).
