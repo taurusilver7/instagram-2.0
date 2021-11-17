@@ -9,8 +9,7 @@ const signIn = ({ providers }) => {
         <img className="w-80" src="https://links.papareact.com/ocw" />
         <p className="font-xs italic">
           This is not the genuine{" "}
-          <span className="font-semibold">Instagram</span>. Ony for educational
-          purpose.
+          <span className="font-semibold">Instagram</span>. Ony for showcasing.
         </p>
         <div className="mt-40">
           {Object.values(providers).map((provider) => (
