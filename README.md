@@ -92,6 +92,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The root and child sub-elements in Transititon component to grant a element within the modal whereas Overlay positions the text part of the modal.
 - An uploadPost function to perform the document to firebase storage and fire the firestore.
 - To avoid any time losses during the image loading, a state to time the sequence in the correct order is created.
+- The test mode database is created in the _/cloud firestore/_ from firestore database menu.
 
 # Next.js + Tailwind CSS.
 
