@@ -3,8 +3,11 @@ import { modalState } from "../atoms/modalAtom";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import { CameraIcon } from "@heroicons/react/outline";
+import { db, storage } from "firebase/storage";
+import { useSession } from "next-auth/react";
 
 const Modal = () => {
+  const { data: session } = useSession();
   const [open, setOpen] = useRecoilState(modalState);
   const filePickerRef = useRef(null);
   const captionRef = useRef(null);
@@ -24,6 +27,14 @@ const Modal = () => {
     // Upload the image to firebase storage with post ID.
 
     // get a dowload URL from firebase storage and update the original post with image.
+
+    const docRef = await addDoc(collection(db, "posts"), {
+      username: session.user.username,
+      caption: captionRef.current.value,
+      profileImg: session.user.image,
+      timestamp: serverTimestamp(),
+    });
+    console.log("New doc added with ID", docRef.id);
   };
 
   const addImageToPost = (e) => {
