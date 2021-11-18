@@ -93,6 +93,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - An uploadPost function to perform the document to firebase storage and fire the firestore.
 - To avoid any time losses during the image loading, a state to time the sequence in the correct order is created.
 - The test mode database is created in the _/cloud firestore/_ from firestore database menu.
+- set the testing _/storage/_ rules to allow read; write functions.
 
 # Next.js + Tailwind CSS.
 
