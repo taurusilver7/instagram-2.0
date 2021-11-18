@@ -16,6 +16,14 @@ const Modal = () => {
     if (loading) return;
 
     setLoading(true);
+
+    // firebase portion. Create a post and add to firestore 'posts' collection.
+
+    // get the post ID for the newly created post.
+
+    // Upload the image to firebase storage with post ID.
+
+    // get a dowload URL from firebase storage and update the original post with image.
   };
 
   const addImageToPost = (e) => {
