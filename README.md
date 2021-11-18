@@ -94,7 +94,8 @@ Using Next-JS, the best developer experience to build the application with all f
 - To avoid any time losses during the image loading, a state to time the sequence in the correct order is created.
 - The test mode database is created in the _/cloud firestore/_ from firestore database menu.
 - set the testing _/storage/_ rules to allow read; write functions.
-- Create a post and add to firestore 'posts' collection.
+- Create a post and add to firestore 'posts' collection and get a post ID for the newly created post.
+- Upload the image to firebase storage using the post ID and get a download URL and update the original post with image.
 
 # Next.js + Tailwind CSS.
 
