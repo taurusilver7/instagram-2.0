@@ -12,10 +12,10 @@ const Modal = () => {
   const [selectedFile, setSelectedFile] = useState(null);
 
   const uploadPost = async () => {
-    //   responsible to upload to firebase storage and firebase.
+    //   responsible to upload to firebase storage and firebase v9.
     if (loading) return;
 
-    setloading(true);
+    setLoading(true);
   };
 
   const addImageToPost = (e) => {
