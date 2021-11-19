@@ -2,10 +2,17 @@ import { useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtom";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
-import { CameraIcon } from "@heroicons/react/outline";
-import { db, storage } from "firebase/storage";
-import { ref, getDowloadURL, uploadString } from "@firebase/storage";
 import { useSession } from "next-auth/react";
+import { CameraIcon } from "@heroicons/react/outline";
+import { db, storage } from "../firebase";
+import {
+  addDoc,
+  collection,
+  doc,
+  serverTimestamp,
+  updateDoc,
+} from "@firebase/firestore";
+import { ref, getDownloadURL, uploadString } from "@firebase/storage";
 
 const Modal = () => {
   const { data: session } = useSession();
@@ -37,7 +44,7 @@ const Modal = () => {
     await uploadString(imageRef, selectedFile, "data_url").then(
       async (snapshot) => {
         // get a dowload URL from firebase storage and update the original post with image.
-        const downloadURL = await getDowloadURL(imageRef);
+        const downloadURL = await getDownloadURL(imageRef);
 
         await updateDoc(doc(db, "posts", docRef.id), {
           image: downloadURL,
@@ -147,7 +154,7 @@ const Modal = () => {
                   onClick={uploadPost}
                   className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm disabled:bg-gray-300 disabled:cursor-not-allowed hover:disabled:bg-gray-300"
                 >
-                  Upload Post
+                  {loading ? "Uploading..." : "Upload Post"}
                 </button>
               </div>
             </div>
