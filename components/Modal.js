@@ -4,6 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import { CameraIcon } from "@heroicons/react/outline";
 import { db, storage } from "firebase/storage";
+import { ref, getDowloadURL, uploadString } from "@firebase/storage";
 import { useSession } from "next-auth/react";
 
 const Modal = () => {
@@ -21,13 +22,6 @@ const Modal = () => {
     setLoading(true);
 
     // firebase portion. Create a post and add to firestore 'posts' collection.
-
-    // get the post ID for the newly created post.
-
-    // Upload the image to firebase storage with post ID.
-
-    // get a dowload URL from firebase storage and update the original post with image.
-
     const docRef = await addDoc(collection(db, "posts"), {
       username: session.user.username,
       caption: captionRef.current.value,
@@ -35,6 +29,25 @@ const Modal = () => {
       timestamp: serverTimestamp(),
     });
     console.log("New doc added with ID", docRef.id);
+
+    // get the post ID for the newly created post.
+    const imageRef = ref(storage, `posts/${docRef.id}/image`);
+
+    // Upload the image to firebase storage with post ID.
+    await uploadString(imageRef, selectedFile, "data_url").then(
+      async (snapshot) => {
+        // get a dowload URL from firebase storage and update the original post with image.
+        const downloadURL = await getDowloadURL(imageRef);
+
+        await updateDoc(doc(db, "posts", docRef.id), {
+          image: downloadURL,
+        });
+      }
+    );
+
+    setOpen(false);
+    setLoading(false);
+    setSelectedFile(null);
   };
 
   const addImageToPost = (e) => {
@@ -131,6 +144,7 @@ const Modal = () => {
               <div className="mt-5 sm:mt-6">
                 <button
                   type="button"
+                  onClick={uploadPost}
                   className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm disabled:bg-gray-300 disabled:cursor-not-allowed hover:disabled:bg-gray-300"
                 >
                   Upload Post
