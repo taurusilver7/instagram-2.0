@@ -43,9 +43,13 @@ const Modal = () => {
     // Upload the image to firebase storage with post ID.
     await uploadString(imageRef, selectedFile, "data_url").then(
       async (snapshot) => {
-        // get a dowload URL from firebase storage and update the original post with image.
+        // get a dowload URL from firebase storage.
         const downloadURL = await getDownloadURL(imageRef);
 
+        // update the original post with image in forestore
+        await updateDoc(doc(db, "posts", docRef.id), {
+          image: downloadURL,
+        });
       }
     );
 
