@@ -46,9 +46,6 @@ const Modal = () => {
         // get a dowload URL from firebase storage and update the original post with image.
         const downloadURL = await getDownloadURL(imageRef);
 
-        await updateDoc(doc(db, "posts", docRef.id), {
-          image: downloadURL,
-        });
       }
     );
 
