@@ -98,6 +98,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - Upload the image to firebase storage using the post ID and get a download URL using _/getDownloadURL/_ method.
 - Then update the original posts in the firestore database with image using _/updateDoc/_ method from firestore and firebase storage imports.
 - The image stores in the firebase storage as temporary file, providing a downloading link to the firestore database. The image link changes as it transfers from storage to firestore.
+- Pull the image from database to front-end and render it in positon to display the latest update.
 
 # Next.js + Tailwind CSS.
 
