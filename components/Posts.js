@@ -41,9 +41,10 @@ const Posts = () => {
       }
     );
     // cleanup useEffect function.
-    return () => {
-      unsubscribe();
-    };
+    // return () => {
+    //   unsubscribe();
+    // };
+    return unsubscribe;
   }, []);
   return (
     <div>
