@@ -33,12 +33,17 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    onSnapshot(
+    const unsubscribe = onSnapshot(
       query(collection(db, "posts"), orderBy("timestamp", "desc")),
       (snapshot) => {
         // if at any point, the data changes in the database, the new values replaces them.
+        setPosts(snapshot.docs);
       }
     );
+    // cleanup useEffect function.
+    return () => {
+      unsubscribe();
+    };
   }, []);
   return (
     <div>
