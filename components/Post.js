@@ -8,9 +8,12 @@ import {
 } from "@heroicons/react/outline";
 import { HeartIcon as HeartIconFilled } from "@heroicons/react/solid";
 import { useSession } from "next-auth/react";
+import { useState } from "react";
 
 const Post = ({ id, username, userImg, img, caption }) => {
   const { data: session } = useSession();
+  const [comments, setComments] = useState([]);
+  const [comment, setComment] = useState();
   return (
     <div className="bg-white my-7 border rounded-sm">
       {/* Header */}
@@ -52,10 +55,19 @@ const Post = ({ id, username, userImg, img, caption }) => {
         <EmojiHappyIcon className="h-7" />
         <input
           type="text"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
           placeholder="Add a comment..."
           className="border-none flex-1 focusring-0 outline-none"
         />
-        <button className="font-semibold text-blue-400">Post</button>
+        <button
+          type="submit"
+          disabled={!comment.trim()}
+          onclick={sendComment}
+          className="font-semibold text-blue-400"
+        >
+          Post
+        </button>
       </form>
     </div>
   );
