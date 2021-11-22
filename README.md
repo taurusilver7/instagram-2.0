@@ -108,6 +108,10 @@ Using Next-JS, the best developer experience to build the application with all f
 - The Asynchronous loading of upload images is rectified with server side rendering.
 - A conditional render to buttons in the uploads using a session is created.
 
+* Comments
+
+- A state to handle _/comments/_ in the Post component. Another state to map the _/comment/_ in the input box is created in the Post component.
+
 # Next.js + Tailwind CSS.
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
