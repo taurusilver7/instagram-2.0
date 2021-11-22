@@ -29,7 +29,7 @@ const Posts = () => {
           key={post.id}
           id={post.id}
           username={post.data().username}
-          userImg={postdata().profileImg}
+          userImg={post.data().profileImg}
           img={post.data().image}
           caption={post.data().caption}
         />
