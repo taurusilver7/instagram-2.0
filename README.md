@@ -106,6 +106,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - use a state for posts and a useEffect to listen from the backend for continuous updates. Create a snapshot listener on firebase with query method in the useEffect with db as dependency(passing values)
 - map the data from firestore to the Post component with an additional syntax of _/data()/_ added to the values.
 - The Asynchronous loading of upload images is rectified with server side rendering.
+- A conditional render to buttons in the uploads using a session is created.
 
 # Next.js + Tailwind CSS.
 
