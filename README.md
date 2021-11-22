@@ -97,11 +97,15 @@ Using Next-JS, the best developer experience to build the application with all f
 - Create a post and add to firestore 'posts' collection and get a post ID for the newly created post.
 - Upload the image to firebase storage using the post ID and get a download URL using _/getDownloadURL/_ method.
 - Then update the original posts in the firestore database with image using _/updateDoc/_ method from firestore and firebase storage imports.
+
+* Post Components
+
 - The image stores in the firebase storage as temporary file, providing a downloading link to the firestore database. The image link changes as it transfers from storage to firestore.
 - Pull the image from database to front-end and render it in positon to display the latest update.
 - Pull the information from database and render the image in Post in real-time.
 - use a state for posts and a useEffect to listen from the backend for continuous updates. Create a snapshot listener on firebase with query method in the useEffect with db as dependency(passing values)
 - map the data from firestore to the Post component with an additional syntax of _/data()/_ added to the values.
+- The Asynchronous loading of upload images is rectified with server side rendering.
 
 # Next.js + Tailwind CSS.
 
