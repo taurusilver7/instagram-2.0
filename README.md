@@ -101,6 +101,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - Pull the image from database to front-end and render it in positon to display the latest update.
 - Pull the information from database and render the image in Post in real-time.
 - use a state for posts and a useEffect to listen from the backend for continuous updates. Create a snapshot listener on firebase with query method in the useEffect with db as dependency(passing values)
+- map the data from firestore to the Post component with an additional syntax of _/data()/_ added to the values.
 
 # Next.js + Tailwind CSS.
 
