@@ -23,7 +23,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
       </div>
 
       {/* img */}
-      <img className="object-cover w-full" src={userImg} alt="" />
+      <img className="object-cover w-full" src={img} alt="" />
 
       {/* buttons */}
       <div className="flex justify-between">
