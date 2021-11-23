@@ -1,4 +1,4 @@
-import { addDoc, collection } from "@firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "@firebase/firestore";
 import {
   BookmarkIcon,
   ChatIcon,
@@ -14,8 +14,8 @@ import { db } from "../firebase";
 
 const Post = ({ id, username, userImg, img, caption }) => {
   const { data: session } = useSession();
-  const [comments, setComments] = useState([]);
   const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
 
   const sendComment = async (e) => {
     e.preventDefault();
@@ -80,7 +80,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
           <button
             type="submit"
             disabled={!comment.trim()}
-            onclick={sendComment}
+            onClick={sendComment}
             className="font-semibold pl-2 text-blue-400"
           >
             Post
