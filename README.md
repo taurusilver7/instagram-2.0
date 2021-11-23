@@ -119,6 +119,7 @@ Using Next-JS, the best developer experience to build the application with all f
 * Likes
 
 - A nested collection called _/Like/_ inside each post is created similar to the commet function and parse it through.
+- A piece of state for likes, a click functionality and then map it to the likes.
 
 # Next.js + Tailwind CSS.
 
