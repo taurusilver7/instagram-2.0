@@ -69,7 +69,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
 
       {/* buttons. Only when a session exists—user logged in */}
       {session && (
-        <div className="flex justify-between mx-auto">
+        <div className="flex justify-between mx-1 my-1">
           <div className="flex space-x-4">
             <HeartIcon className="btn" />
             <ChatIcon className="btn" />

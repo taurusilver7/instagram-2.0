@@ -116,6 +116,10 @@ Using Next-JS, the best developer experience to build the application with all f
 - The comment section structure is created with conditon (comments.length > 0)
 - import react moment dependency to parse timestamp to the comments according to the location.
 
+* Likes
+
+- A nested collection called _/Like/_ inside each post is created similar to the commet function and parse it through.
+
 # Next.js + Tailwind CSS.
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
