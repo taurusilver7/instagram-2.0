@@ -24,6 +24,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
   const { data: session } = useSession();
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  const [likes, setLikes] = useState([]);
 
   // Collect the comments in a piece of state from the database to display on the app.
   useEffect(
@@ -35,7 +36,15 @@ const Post = ({ id, username, userImg, img, caption }) => {
         ),
         (snapshot) => setComments(snapshot.docs)
       ),
-    [db]
+    [db, id]
+  );
+  // For the likes mapping fn
+  useEffect(
+    () =>
+      onSnapshot(collection(db, "posts", id, "likes"), (snapshot) =>
+        setLikes(snapshot.docs)
+      ),
+    [db, id]
   );
 
   const sendComment = async (e) => {
