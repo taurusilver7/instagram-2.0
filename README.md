@@ -111,6 +111,7 @@ Using Next-JS, the best developer experience to build the application with all f
 * Comments
 
 - A state to handle _/comments/_ in the Post component. Another state to map the _/comment/_ in the input box is created in the Post component.
+- The form is set to recieve the comment and the button was disabled to blank comments (spaces) and a function to sendComments is created for it.
 
 # Next.js + Tailwind CSS.
 
