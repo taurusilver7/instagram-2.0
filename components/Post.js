@@ -18,9 +18,9 @@ const Post = ({ id, username, userImg, img, caption }) => {
   const [comments, setComments] = useState([]);
 
   const sendComment = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); //prevent the page from refreshing.
 
-    const commentToSend = comment;
+    const commentToSend = comment;// copy the comment before sending and clear the input
     setComment("");
 
     await addDoc(collection(db, "posts", id, "comments"), {
