@@ -1,4 +1,11 @@
-import { addDoc, collection, serverTimestamp } from "@firebase/firestore";
+import {
+  addDoc,
+  collection,
+  onSnapshot,
+  orderBy,
+  query,
+  serverTimestamp,
+} from "@firebase/firestore";
 import {
   BookmarkIcon,
   ChatIcon,
@@ -17,10 +24,22 @@ const Post = ({ id, username, userImg, img, caption }) => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
+  useEffect(
+    () =>
+      onSnapshot(
+        query(
+          collection(db, "posts", id, "comments"),
+          orderBy("timestamp", "desc")
+        ),
+        (snapshot) => setComments(snapshot.docs)
+      ),
+    [db]
+  );
+
   const sendComment = async (e) => {
     e.preventDefault(); //prevent the page from refreshing.
 
-    const commentToSend = comment;// copy the comment before sending and clear the input
+    const commentToSend = comment; // copy the comment before sending and clear the input
     setComment("");
 
     await addDoc(collection(db, "posts", id, "comments"), {
