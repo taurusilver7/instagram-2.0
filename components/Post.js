@@ -18,6 +18,7 @@ import { HeartIcon as HeartIconFilled } from "@heroicons/react/solid";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
+import Moment from "react-moment";
 
 const Post = ({ id, username, userImg, img, caption }) => {
   const { data: session } = useSession();
@@ -68,7 +69,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
 
       {/* buttons. Only when a session exists—user logged in */}
       {session && (
-        <div className="flex justify-between">
+        <div className="flex justify-between mx-auto">
           <div className="flex space-x-4">
             <HeartIcon className="btn" />
             <ChatIcon className="btn" />
@@ -98,6 +99,10 @@ const Post = ({ id, username, userImg, img, caption }) => {
                 <span className="font-bold">{comment.data().username}</span>{" "}
                 {comment.data().comment}
               </p>
+
+              <Moment fromNow className="pr-5 text-xs">
+                {comment.data().timestamp?.toDate()}
+              </Moment>
             </div>
           ))}
         </div>
