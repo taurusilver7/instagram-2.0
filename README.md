@@ -114,6 +114,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - The form is set to recieve the comment and the button was disabled to blank comments (spaces) and a function to sendComments is created for it.
 - A new helper function to create a new collection the existing _/posts/_ and add the document data to it.
 - The comment section structure is created with conditon (comments.length > 0)
+- import react moment dependency to parse timestamp to the comments according to the location.
 
 # Next.js + Tailwind CSS.
 
