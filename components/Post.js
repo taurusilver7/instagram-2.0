@@ -16,7 +16,7 @@ import {
 } from "@heroicons/react/outline";
 import { HeartIcon as HeartIconFilled } from "@heroicons/react/solid";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { db } from "../firebase";
 
 const Post = ({ id, username, userImg, img, caption }) => {
@@ -24,6 +24,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
 
+  // Collect the comments in a piece of state from the database to display on the app.
   useEffect(
     () =>
       onSnapshot(
@@ -84,6 +85,19 @@ const Post = ({ id, username, userImg, img, caption }) => {
       </p>
 
       {/* comments */}
+      {comments.length > 0 && (
+        <div className="ml-10 h-20 overflow-y-scroll scrollbar-thumb-black scrollbar-thin">
+          {comments.map((comment) => (
+            <div className="flex items-center space-x-2 mb-3">
+              <img
+                className="h-7 rounded-full"
+                src={comment.data().userImage}
+                alt=""
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* input box. Conditional render with a session */}
       {session && (
