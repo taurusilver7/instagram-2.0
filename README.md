@@ -1,6 +1,6 @@
 # Instagram 2.0
 
-Using Next-JS, the best developer experience to build the application with all features needed for production, an instant messaging and attachment sending application was build.
+Using Next-JS, the best developer experience to build the application with all features needed for production, build an instant messaging and attachment sending application.
 
 > Taliwind CSS framework provided the responsive design for the build.
 > Custom nextAuth for Authentication and Authorization.
@@ -9,7 +9,7 @@ Using Next-JS, the best developer experience to build the application with all f
 
 > The application runs on help with recoil and custom nextAuth and firebase V9.
 
-## Process
+## Build
 
 - import the required dependencies & dev-dependencies from `npm install <package>`.
 
@@ -125,6 +125,9 @@ Using Next-JS, the best developer experience to build the application with all f
 - Populate the like/dislike algorithm to a post in useEffect where the index of the given like/dislike is matched with the uid of user issued the like in the database.
 - set the UI logic based on the like/dislike property with a condition from _/liked/_ state.
 - show the number of likes near the like icon.
+
+- The deployed web domain is added to the google cloud SDK configuration for avoiding any breakups.
+- The env variables are added to the deployment site for continuous google authentication required for the application.
 
 # Next.js + Tailwind CSS.
 
