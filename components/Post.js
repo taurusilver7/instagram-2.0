@@ -1,6 +1,7 @@
 import {
   addDoc,
   collection,
+  deleteDoc,
   doc,
   onSnapshot,
   orderBy,
@@ -27,7 +28,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
-  const [like, setLike] = useState(false);
+  const [liked, setLiked] = useState(false);
 
   // Collect the comments in a piece of state from the database to display on the app.
   useEffect(
@@ -41,7 +42,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
       ),
     [db, id]
   );
-  // For the likes mapping fn
+  // Mapping function for Likes in a post.
   useEffect(
     () =>
       onSnapshot(collection(db, "posts", id, "likes"), (snapshot) =>
@@ -53,14 +54,20 @@ const Post = ({ id, username, userImg, img, caption }) => {
   // Popule the likes/dislikes on a post. Only depend on the likes array.
   useEffect(
     () =>
-      setLike(likes.findIndex((like) => like.id === session?.user?.uid) !== -1),
+      setLiked(
+        likes.findIndex((like) => like.id === session?.user?.uid) !== -1
+      ),
     [likes]
   );
 
   const likePost = async () => {
-    await setDoc(doc(db, "posts", id, "likes", session.user.uid), {
-      username: session.user.username,
-    });
+    if (liked) {
+      await deleteDoc(doc(db, "posts", id, "likes", session.user.id));
+    } else {
+      await setDoc(doc(db, "posts", id, "likes", session.user.uid), {
+        username: session.user.username,
+      });
+    }
   };
 
   const sendComment = async (e) => {
