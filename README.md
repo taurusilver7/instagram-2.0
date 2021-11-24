@@ -122,6 +122,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - A piece of state for likes, a click functionality and then map it to the likes.
 - Each _/like/_ document in the post collection was made sure to name using the userID (instead of a random ID) with the user data for allowing a like/dislike the post once per user.
 - Liking the post adds the document to the post collection and unliking the post deletes the document from the collection.
+- Populate the like/dislike algorithm to a post in useEffect where the index of the given like/dislike is matched with the id of like in the database.
 
 # Next.js + Tailwind CSS.
 
