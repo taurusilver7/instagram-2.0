@@ -70,7 +70,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
     }
   };
 
-  console.log(liked);
+  // console.log(liked);
 
   const sendComment = async (e) => {
     e.preventDefault(); //prevent the page from refreshing.
@@ -122,6 +122,9 @@ const Post = ({ id, username, userImg, img, caption }) => {
 
       {/* captions */}
       <p className="p-5 truncate">
+        {likes.length > 0 && (
+          <p className="font-bold mb-1">{likes.length} likes</p>
+        )}
         <span className="font-bold mr-1">{username} </span>
         {caption}
       </p>
