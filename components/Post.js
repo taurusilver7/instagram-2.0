@@ -27,6 +27,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
+  const [like, setLike] = useState(false);
 
   // Collect the comments in a piece of state from the database to display on the app.
   useEffect(
@@ -47,6 +48,13 @@ const Post = ({ id, username, userImg, img, caption }) => {
         setLikes(snapshot.docs)
       ),
     [db, id]
+  );
+
+  // Popule the likes/dislikes on a post. Only depend on the likes array.
+  useEffect(
+    () =>
+      setLike(likes.findIndex((like) => like.id === session?.user?.uid) !== -1),
+    [likes]
   );
 
   const likePost = async () => {
