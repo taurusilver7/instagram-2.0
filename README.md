@@ -127,7 +127,7 @@ Using Next-JS, the best developer experience to build the application with all f
 - show the number of likes near the like icon.
 
 - The deployed web domain is added to the google cloud SDK configuration for avoiding any breakups.
-- The env variables are added to the deployment site for continuous google authentication required for the application.
+- The env variables are added before the deployment to the hosing site for uninterrupted google authentication required for the application.
 
 # Next.js + Tailwind CSS.
 
