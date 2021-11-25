@@ -21,7 +21,7 @@ const Posts = () => {
     return unsubscribe;
   }, [db]);
 
-  console.log(posts);
+  // console.log(posts);
   return (
     <div>
       {posts.map((post) => (
