@@ -70,7 +70,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
     }
   };
 
-  // console.log(liked);
+  console.log(liked);
 
   const sendComment = async (e) => {
     e.preventDefault(); //prevent the page from refreshing.
