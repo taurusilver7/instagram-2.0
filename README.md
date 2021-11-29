@@ -128,6 +128,7 @@ Using Next-JS, the best developer experience to build the application with all f
 
 - The deployed web domain is added to the google cloud SDK configuration for avoiding any breakups.
 - The env variables are added before the deployment to the hosing site for uninterrupted google authentication required for the application (all the env variables are added before updating them after the deployment)
+- The authorized JS origin and the authorized redirect url are added to google cloud data.
 
 # Next.js + Tailwind CSS.
 
