@@ -5,17 +5,17 @@ import Modal from "../components/Modal";
 
 export default function Home() {
   return (
-    <div className="bg-gray-50 h-screen overflow-y-scroll">
+    <div className="bg-gray-50 max-h-screen scrollbar-hide overflow-y-scroll">
       <Head>
         <title>Instagram 2.0</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <Feed />
-      <Modal />
-
-      {/* Modal */}
+      <div>
+        <Header />
+        <Feed />
+        <Modal />
+      </div>
     </div>
   );
 }
