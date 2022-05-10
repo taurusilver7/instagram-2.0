@@ -85,6 +85,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
       timestamp: serverTimestamp(),
     });
   };
+
   return (
     <div className="bg-white my-7 border rounded-sm">
       {/* Header */}
